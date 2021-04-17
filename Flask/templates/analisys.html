@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Analisys
+{% endblock %}
+
+{% block link %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/analisys.css')}}'>
+{% endblock %}
+
+{% block page %}
+Analisys
+{% endblock %}
+
+{% block content %}
+
+<div id="content">
+    <div class="content_boxs">
+        <div class="content_box_analisys" id="content_box_ai">AI</div>
+        <div class="content_box_analisys" id="content_box_ai_pages">
+            <div class="content_box_analisys_element"><a href="{{ url_for('ai_video')}}">Video</a></div>
+            <div class="content_box_analisys_element">|</div>
+            <div class="content_box_analisys_element"><a href="{{ url_for('ai_photo')}}">Photo</a></div>
+            <div class="content_box_analisys_element">|</div>
+            <div class="content_box_analisys_element"><a href="{{ url_for('ai_audio')}}">Audio</a></div>
+        </div>
+    </div>
+    <div id="content_text">
+        <h1>What we can do</h1>
+        <p>
+            With the help of artificial intelligence, you are able to count: the number of people, animals or other objects from a given list in your video or photo; is also able to translate the audio file into a text set, where there will be crucifixion voices from conversations.
+        </p>
+        <p>                
+            Despite artificial intelligence, we can solve problems for you, such as: data classification and clustering, or display certain graphs of functions. 
+            Join us, it will be fun with us :) </p>
+    </div>
+    <div class="content_boxs">
+        <div class="content_box_analisys" id="content_box_ni">NI</div>
+        <div class="content_box_analisys" id="content_box_ni_pages">
+            <div class="content_box_analisys_element"><a href="{{ url_for('ni_video')}}">Video</a></div>
+            <div class="content_box_analisys_element">|</div>
+            <div class="content_box_analisys_element"><a href="{{ url_for('ni_photo')}}">Photo</a></div>
+            <div class="content_box_analisys_element">|</div>
+            <div class="content_box_analisys_element"><a href="{{ url_for('ni_clustering')}}">Clustering</a></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<div class="footer_el"><a href="{{ url_for('info')}}">Info</a></div>
+{% endblock %}

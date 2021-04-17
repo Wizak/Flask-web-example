@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+NI analisys clustering
+{% endblock %}
+
+{% block link %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/ni_clustering.css')}}'>
+{% endblock %}
+
+{% block page %}
+NI analisys clustering
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="content_video">
+        <form action="/analisys/ni_clustering" method="POST">
+            <div id="container">
+                <div class="mini_container">
+                    <p class="boxs">Points</p>
+                    <input name="points" class="boxs" type="text" name="points">
+                    <p class="boxs">A</p>
+                    <input name="a" class="boxs" type="text" name="a">
+                </div>
+                <div class="mini_container">
+                    <p class="boxs">Centers</p>
+                    <input name="centers" class="boxs" type="text">
+                    <p class="boxs">B</p>
+                    <input name="b" class="boxs" type="text" name="b">
+                </div>
+            </div>
+            <div class="analisys_video_form">
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </div>
+        </form>
+    </div>
+    <div id="content_text">
+        <img src="{{ url_for('static', filename='other/load.gif')}}">
+        <p>
+            Cluster analysis is not a single algorithm, but a general problem, for the solution of which different approaches are used. 
+            In particular, algorithms for constructing clusters can differ significantly in understanding what to assign to one cluster and how to effectively search for them. 
+            Among the popular concepts of clusters are groups with elements that are formed based on the distance between them, on the density of sections in the data space, intervals or on specific statistical distributions. 
+            Therefore, clustering can be formulated as a problem of multicriteria optimization.       
+        </p>
+    </div>
+    <div class="content_video">
+        <img width="450" height="400" src="{{url_for('ni_clustering_feed')}}">
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="footer_el"><a href="{{ url_for('analisys')}}">Analisys</a></div>
+<div class="footer_el">|</div>
+<div class="footer_el"><a href="{{ url_for('info')}}">Info</a></div>
+{% endblock %}

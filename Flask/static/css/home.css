@@ -1,0 +1,29 @@
+#content_text {
+    margin: 0px 50px;
+    justify-content: center;
+
+}
+
+.content_video {
+    margin: 0px 50px; 
+}
+
+#footer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    padding: 0px 5px;
+}
+
+#footering {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.footer_el{
+    padding: 10px;
+}

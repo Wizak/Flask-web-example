@@ -1,0 +1,58 @@
+#content_text {
+    position: relative;
+    top: 120px;
+    margin: 0px 50px;
+    width: 30%;
+    justify-content: center;
+
+}
+
+#content_box_ai_pages {
+    position: relative;
+    top: 280px;
+}
+
+#content_box_ni_pages {
+    position: relative;
+    top: 280px;
+}
+
+.content_box_analisys_element {
+    padding: 10px;
+}
+
+#content {
+    position: relative;
+    top: 100px;
+    margin-bottom: 52px;
+}
+
+.content_box_analisys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    padding: 10px;
+}
+
+#footer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    padding: 0px 5px;
+}
+
+#footering {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 15px;
+    padding: 20px;
+    position: relative;
+    top: 420px;
+}
+
+.footer_el{
+    padding: 10px;
+}

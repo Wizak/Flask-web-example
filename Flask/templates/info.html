@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Info
+{% endblock %}
+
+{% block link %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/info.css')}}'>
+{% endblock %}
+
+{% block page %}
+Info
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div id="content_text">
+        <h1>About me</h1>
+        <p>
+            Hi, my name is Bogdan, I study at the university, this work is a diploma. 
+            If you see this, it means that I am handing in my thesis and presenting this project to you. 
+            Thank you for your attention. 
+            Please give a good grade.
+            I hope you have read the functionality of the site. 
+            Sorry for the banal work, but I think that will be enough. 
+        </p>
+        <p>I wish you a good day :)</p>
+    </div>
+</div>
+{% endblock %}

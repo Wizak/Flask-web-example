@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+NI analisys video
+{% endblock %}
+
+{% block link %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/ni_video.css')}}'>
+{% endblock %}
+
+{% block page %}
+NI analisys video
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="content_video">
+        <img class="ni_stream" src="{{ url_for('ni_video_feed') }}">
+        <form class="analisys_video_form" enctype="multipart/form-data" method="post" action='/analisys/ni_video'>
+            <div id="control_panel">
+                <div id="selector">
+                    <label for="cars">Choose efect:</label>
+                    <select name="efect" id="cars">
+                        <option value="0">Distort</option>
+                        <option value="1">Check red</option>
+                        <option value="2">Check green</option>
+                        <option value="3">Check blue</option>
+                    </select>
+                </div>
+                <input type="submit" value="Submit">
+            </div>
+        </form> 
+    </div>
+    <div id="content_text">
+        <img src='{{ url_for('static', filename='other/load.gif')}}'>
+        <p>
+            Computer video processing - the process of editing video files on a computer, using special programs - video editors. The whole process of computer video processing includes three consecutive and interrelated actions:
+            <ul>
+                <li>video capture</li>
+                <li>assembling</li>
+                <li>final compression</li>
+            </ul>
+        </p>
+    </div>
+    <div class="content_video">
+        <img class="ni_stream" src="{{ url_for('ni_video_feed_after') }}">
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="footer_el"><a href="{{ url_for('analisys')}}">Analisys</a></div>
+<div class="footer_el">|</div>
+<div class="footer_el"><a href="{{ url_for('info')}}">Info</a></div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+AI analisys audio
+{% endblock %}
+
+{% block link %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/ai_audio.css')}}'>
+{% endblock %}
+
+{% block page %}
+AI analisys audio
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="content_video">
+        <div id="pocik">
+            <img id="play_button" src="{{ url_for('static', filename='other/play.png')}}">
+        </div>
+        <audio id="pocikAudo">
+            <source src="{{url_for('ai_audio_feed')}}" type="audio/wav">
+        </audio>
+        <form class="analisys_video_form" enctype="multipart/form-data" method="post" action='/analisys/ai_audio'>
+            <p>
+                <input type="file" id="file" name="audio">
+                <input type="submit" value="Submit">
+            </p>
+        </form> 
+    </div>
+    <div id="content_text">
+        <img src="{{ url_for('static', filename='other/load.gif')}}">
+        <p>
+            This library is a wrapper over many popular speech recognition services / libraries.
+            Because Of all the services presented in the list of the library, Google Speech Recognition was the first to earn, and I used it later.
+            The library uses machine learning methods. 
+            Training takes place on data sets in the format of dialogues.
+        </p>
+    </div>
+    <div class="content_video">
+        <form method="post">
+            <p><textarea rows="18" cols="60" name="text">{{ text }}</textarea></p>
+        </form>
+    </div>
+</div>
+
+<script>
+    var pocik = document.getElementById('pocik'),
+      pocikAudio = document.getElementById('pocikAudo');
+    pocik.addEventListener('click', fPlay, false);
+    function fPlay() {
+      pocikAudio.play();
+    }
+</script>
+{% endblock %}
+
+{% block footer %}
+<div class="footer_el"><a href="{{ url_for('analisys')}}">Analisys</a></div>
+<div class="footer_el">|</div>
+<div class="footer_el"><a href="{{ url_for('info')}}">Info</a></div>
+{% endblock %}

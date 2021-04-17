@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block link %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/home.css')}}'>
+{% endblock %}
+
+{% block page %}
+Home
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="content_video">
+        <video src='{{ url_for('static', filename='other/home_video1.mp4')}}' autoplay loop muted></video>
+    </div>
+    <div id="content_text">
+        <h1>Computer Vision</h1>
+        <p>
+            Computer vision or Computer vision is the theory and technology of creating machines that can detect, track and identify objects. 
+            As a scientific discipline, computer vision belongs to the theory and technology of creating artificial systems that receive information in the form of images. 
+            Video data can be presented in many forms, such as a video sequence, images from different cameras or three-dimensional data from a medical scanner.
+        </p>
+        <p>
+            In most cases, the algorithm for solving the problem is unknown in advance. 
+            There is no exact definition of this science, because philosophy does not address the question of the nature and status of human intelligence. 
+            There is no exact criterion for a computer to achieve "reasonableness", although a number of hypotheses have been proposed before artificial intelligence, such as the Turing test or the Newell-Simon hypothesis. 
+            Today, there are many approaches to both understanding the problems of artificial intelligence and creating intelligent systems.
+            Artificial intelligence is a very young field of research, founded in 1956. 
+            Its historical path resembles a sinusoid, each "take-off" of which was initiated by some new idea. 
+            Today its development is on the "rise" and is based on application
+        </p>
+        <h1>Data Science</h1>
+        <p>
+            Data science uses techniques and theoretical developments from many fields of mathematics, statistics, operations research, scientific informatics and computer science, including signal processing, probabilistic models, machine learning, statistical learning, classification, clustering, data mining, databases data, pattern recognition theory, visualization, predictive analytics, fuzzy modeling, data warehouses, data compression, programming, artificial intelligence, etc. 
+            Methods designed for big data are a separate object of consideration in data science, but science itself is not limited to them; in addition, big data technologies often focus on organizing and pre-processing data rather than analyzing it. 
+            The development of machine learning has led to the growing importance of data science and its faster development.
+            Data science influences research and applied research in many fields, including machine translation, speech recognition, robotics, search engines, the digital economy, and the biological sciences, computer technology in medicine, health care, and the humanities.
+            It has a strong impact on the economy, business and finance. 
+            From a business perspective, data science is an integral part of the analysis of competitors - a new industry that covers areas such as data mining and data analysis.
+        </p>
+    </div>
+    <div class="content_video">
+        <video src='{{ url_for('static', filename='other/home_video2.mp4')}}' autoplay loop muted></video>
+    </div>
+</div>    
+{% endblock %}
+
+{% block footer %}
+<div class="footer_el"><a href="{{ url_for('analisys')}}">Analisys</a></div>
+<div class="footer_el">|</div>
+<div class="footer_el"><a href="{{ url_for('info')}}">Info</a></div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+NI analisys video
+{% endblock %}
+
+{% block link %}
+<link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/ai_video.css')}}'>
+{% endblock %}
+
+{% block page %}
+NI analisys video
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div class="content_video">
+        <img class="ni_stream" src="{{ url_for('ai_video_feed') }}">
+    </div>
+    <div id="content_text">
+        <img src='{{ url_for('static', filename='other/load.gif')}}'>
+        <p>
+            Computer video processing - the process of editing video files on a computer, using special programs - video editors. The whole process of computer video processing includes three consecutive and interrelated actions:
+            <ul>
+                <li>video capture</li>
+                <li>assembling</li>
+                <li>final compression</li>
+            </ul>
+        </p>
+    </div>
+    <div class="content_video">
+        <img class="ni_stream" src="{{ url_for('ai_video_feed_after') }}">
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="footer_el"><a href="{{ url_for('analisys')}}">Analisys</a></div>
+<div class="footer_el">|</div>
+<div class="footer_el"><a href="{{ url_for('info')}}">Info</a></div>
+{% endblock %}
